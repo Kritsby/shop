@@ -16,7 +16,7 @@ func NewStock(repo repository.Repository) *Stock {
 	}
 }
 
-func (s *Stock) Reserve(ctx context.Context, products model.Ids) error {
+func (s *Stock) Reserve(ctx context.Context, products model.IdRequest) error {
 	err := s.repo.Reserve(ctx, products)
 	if err != nil {
 		return err
@@ -24,7 +24,7 @@ func (s *Stock) Reserve(ctx context.Context, products model.Ids) error {
 
 	return nil
 }
-func (s *Stock) ReserveRelease(ctx context.Context, products model.Ids) error {
+func (s *Stock) ReserveRelease(ctx context.Context, products model.IdRequest) error {
 	err := s.repo.ReserveRelease(ctx, products)
 	if err != nil {
 		return err

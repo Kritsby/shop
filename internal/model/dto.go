@@ -1,3 +1,5 @@
 package model
 
-type Ids []int
+type IdRequest struct {
+	Ids []int
+}

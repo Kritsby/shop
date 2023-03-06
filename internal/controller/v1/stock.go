@@ -3,6 +3,7 @@ package v1
 import (
 	"dev/lamoda_test/internal/model"
 	"encoding/json"
+	"fmt"
 	"github.com/rs/zerolog/log"
 	"github.com/uptrace/bunrouter"
 	"net/http"
@@ -15,7 +16,7 @@ import (
 // @Description Reserve some products
 // @Accept  json
 // @Produce  json
-// @Param input body model.Ids true "products id"
+// @Param input body model.IdRequest true "products id"
 // @Success 200
 // @Failure 500
 // @Router /v1/reserve [POST]
@@ -24,7 +25,7 @@ func (h *Handler) reserve(w http.ResponseWriter, req bunrouter.Request) error {
 	body := req.Body
 	defer req.Body.Close()
 
-	var product model.Ids
+	var product model.IdRequest
 	if err := json.NewDecoder(body).Decode(&product); err != nil {
 		log.Error().Err(err)
 		return h.responseJSON(w, req, http.StatusBadRequest, err)
@@ -45,7 +46,7 @@ func (h *Handler) reserve(w http.ResponseWriter, req bunrouter.Request) error {
 // @Description Release some products
 // @Accept  json
 // @Produce  json
-// @Param input body model.Ids true "products id"
+// @Param input body model.IdRequest true "products id"
 // @Success 200
 // @Failure 500
 // @Router /v1/release [POST]
@@ -54,8 +55,9 @@ func (h *Handler) reserveRelease(w http.ResponseWriter, req bunrouter.Request) e
 	body := req.Body
 	defer req.Body.Close()
 
-	var product model.Ids
+	var product model.IdRequest
 	if err := json.NewDecoder(body).Decode(&product); err != nil {
+		fmt.Println()
 		log.Error().Err(err)
 		return h.responseJSON(w, req, http.StatusBadRequest, err)
 	}
