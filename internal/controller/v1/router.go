@@ -1,12 +1,12 @@
 package v1
 
 import (
-	"dev/lamoda_test/internal/service"
 	"github.com/rs/zerolog/log"
 	httpSwagger "github.com/swaggo/http-swagger"
 	"github.com/uptrace/bunrouter"
 	"github.com/uptrace/bunrouter/extra/reqlog"
 	"net/http"
+	"shop/internal/service"
 )
 
 type Handler struct {

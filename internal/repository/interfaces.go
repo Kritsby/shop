@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"dev/lamoda_test/internal/model"
+	"shop/internal/model"
 )
 
 type Repository interface {

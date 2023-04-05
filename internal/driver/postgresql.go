@@ -2,9 +2,9 @@ package driver
 
 import (
 	"context"
-	"dev/lamoda_test/internal/config"
 	"fmt"
 	"github.com/jackc/pgx/v4/pgxpool"
+	"shop/internal/config"
 )
 
 func NewPostgresPool(cfg config.Postgres) (*pgxpool.Pool, error) {

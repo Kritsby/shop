@@ -2,15 +2,15 @@ package app
 
 import (
 	"context"
-	"dev/lamoda_test/internal/config"
-	controller "dev/lamoda_test/internal/controller/v1"
-	"dev/lamoda_test/internal/driver"
-	"dev/lamoda_test/internal/repository"
-	"dev/lamoda_test/internal/server"
-	"dev/lamoda_test/internal/service"
 	"github.com/rs/zerolog/log"
 	"os"
 	"os/signal"
+	"shop/internal/config"
+	controller "shop/internal/controller/v1"
+	"shop/internal/driver"
+	"shop/internal/repository"
+	"shop/internal/server"
+	"shop/internal/service"
 	"syscall"
 	"time"
 )

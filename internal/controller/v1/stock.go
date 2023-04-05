@@ -1,12 +1,12 @@
 package v1
 
 import (
-	"dev/lamoda_test/internal/model"
 	"encoding/json"
 	"fmt"
 	"github.com/rs/zerolog/log"
 	"github.com/uptrace/bunrouter"
 	"net/http"
+	"shop/internal/model"
 	"strconv"
 )
 

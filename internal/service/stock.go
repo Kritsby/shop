@@ -2,8 +2,8 @@ package service
 
 import (
 	"context"
-	"dev/lamoda_test/internal/model"
-	"dev/lamoda_test/internal/repository"
+	"shop/internal/model"
+	"shop/internal/repository"
 )
 
 type Stock struct {

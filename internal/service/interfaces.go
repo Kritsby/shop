@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"dev/lamoda_test/internal/model"
+	"shop/internal/model"
 )
 
 //go:generate mockgen -source=interfaces.go -destination=mocks/mock.go

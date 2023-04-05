@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "dev/lamoda_test/docs"
-	"dev/lamoda_test/internal/app"
-	"dev/lamoda_test/internal/config"
 	"log"
+	_ "shop/docs"
+	"shop/internal/app"
+	"shop/internal/config"
 )
 
 var cfg config.Config

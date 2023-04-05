@@ -2,14 +2,14 @@ package v1
 
 import (
 	"bytes"
-	"dev/lamoda_test/internal/model"
-	"dev/lamoda_test/internal/service"
-	mock_service "dev/lamoda_test/internal/service/mocks"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/uptrace/bunrouter"
 	"net/http"
 	"net/http/httptest"
+	"shop/internal/model"
+	"shop/internal/service"
+	mock_service "shop/internal/service/mocks"
 	"testing"
 )
 
